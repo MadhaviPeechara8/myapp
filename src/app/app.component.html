@@ -1,8 +1,62 @@
-<div class="text-center">
+<!--<div class="text-center mt-5">
     <h1 class="text-info">To-Do List</h1>
     <hr>
-    <div>
-        <label for="">Enter ToDo Item</label>
-        <input type="text" class="form-control" #ref>
+    <div class="d-block mx-auto w-50">
+        <label for="" class="form-label">Enter User</label>
+        <input type="text" class="form-control w-100" #ref><br>
+        <button class="btn btn-success p-3" (click)="sendData(ref.value)">Add User</button><br><br>
+
+        <button class="btn btn-warning p-3" (click)="changeStatus()">{{ status?"Hide Users":"Show Users"}}</button>
+        <div *ngIf="status">
+            <h2>List of Users</h2>
+            <hr>
+            <h3 *ngFor="let x of arr">{{x}}</h3>
+        </div>
     </div>
-</div>
+</div>-->
+<!--Angular Assignment-2-->
+<!--<div class="d-block mx-auto" style="max-width: 700px;">
+    <h1 class="text-center heading">User Registration Form</h1>
+    <form #ref="ngForm" (ngSubmit)="addUserData(ref)">
+        <div>
+            <label for="un">Username</label>
+            <input type="text" name="username" id="un" class="form-control" ngModel>
+        </div>
+        <div>
+            <label for="pw">Datre of Birth</label>
+            <input type="date" name="dob" id="pw" class="form-control" ngModel>
+        </div>
+        <div>
+            <label for="mail">Mail</label>
+            <input type="email" name="email" id="mail" class="form-control" ngModel>
+        </div>
+        <button type="submit" class="btn btn-warning d-block mx-auto m-3">register</button>
+    </form>
+    <div class="text-center">
+        <h2 class="text-info">List of Users</h2>
+        <h2 *ngIf="users.length==0">No Users Found!!!</h2>
+        <div *ngIf="users.length!=0">
+
+            <div *ngFor="let x of users;let ind=index;">
+                <div class="accordion" id="accordionExample">
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingOne">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                         {{x.username}}
+                            </button>
+                            <button class="btn btn-danger" (click)="deleteUser(ind)">Delete</button>
+                        </h2>
+                        <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                                <h2>{{x.username}} Details</h2>
+                                <b>Date of Birth:{{x.dob}}</b><br>
+                                <b>Email:{{x.email}}</b><br>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>-->
+<h1 class="text-center text-primary">Phones</h1>
+<app-product></app-product>
